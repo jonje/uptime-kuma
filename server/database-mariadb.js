@@ -90,10 +90,10 @@ class Database {
         const knexInstance = knex({
             client: mdb,
             connection: {
-                host: "localhost",
-                port: "3306",
-                user: "root",
-                password: "Fall2018",
+                host: process.env.MARIA_HOST,
+                port: process.env.MARIA_PORT,
+                user: process.env.MARIA_USER,
+                password: process.env.MARIA_PASS,
                 database: "kuma",
                 acquireConnectionTimeout: acquireConnectionTimeout,
             },
